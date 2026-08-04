@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+     header{
+        background-color: #183C63;
+        color: #FFFFFF;
+        text-align: center;
+        max-height:800px ;
+        margin: 0 auto;
+        padding: 16px
+        border: 5px solid #95ceed
+       }
+     main{
+        background-color: #FFFFFF;
+        color: #183C63;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 16px;
+}
+img{
+  width: 80px ;
+  height: 80px;
+}
+    </style>
+</head>
+<body>
+    <header>
+ <p>my blog dance</p>
+</header>
+<main>
+  <img src="Gemini_Generated_Image_hbd451hbd451hbd4.png" alt="Ilustração minimalista de uma dançarina de hip hop em uma pose de dança urbana dinâmica. O desenho utiliza a cor azul-escuro sobre um fundo totalmente branco. A dançarina veste roupas largas de estilo street, com boné e tênis detalhados, transmitindo movimento e energia em um design limpo e moderno.">
+ <h2>Meu primeiro post</h2>
+ <p>Por: Maria Luiza</p>
+ <p>Boas-vindas ao meu blog! Aqui vou compartilhar dicas sobre hip hop.</p>
+</main>
+<h1>falando sobre o estilo de dança hip hop</h1>   
+</body>
+</html>
