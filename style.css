@@ -1,42 +1,200 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <style>
-     header{
-        background-color: #183C63;
-        color: #FFFFFF;
-        text-align: center;
-        max-height:800px ;
-        margin: 0 auto;
-        padding: 16px
-        border: 5px solid #95ceed
-       }
-     main{
-        background-color: #FFFFFF;
-        color: #183C63;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 16px;
+/* --- VARIÁVEIS DE CORES (Tema Claro por padrão) --- */
+:root {
+    --bg-color: #f4f4f9;
+    --card-bg: #ffffff;
+    --text-color: #183C63;
+    --header-bg: #183C63;
+    --header-text: #ffffff;
+    --border-color: #95ceed;
 }
-img{
-  width: 80px ;
-  height: 80px;
+
+/* --- TEMA ESCURO --- */
+body.dark-mode {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --header-bg: #0b1d30;
+    --header-text: #95ceed;
+    --border-color: #183C63;
 }
-    </style>
-</head>
-<body>
-    <header>
- <p>my blog dance</p>
-</header>
-<main>
-  <img src="Gemini_Generated_Image_hbd451hbd451hbd4.png" alt="Ilustração minimalista de uma dançarina de hip hop em uma pose de dança urbana dinâmica. O desenho utiliza a cor azul-escuro sobre um fundo totalmente branco. A dançarina veste roupas largas de estilo street, com boné e tênis detalhados, transmitindo movimento e energia em um design limpo e moderno.">
- <h2>Meu primeiro post</h2>
- <p>Por: Maria Luiza</p>
- <p>Boas-vindas ao meu blog! Aqui vou compartilhar dicas sobre hip hop.</p>
-</main>
-<h1>falando sobre o estilo de dança hip hop</h1>   
-</body>
-</html>
+
+/* --- ESTILOS GERAIS --- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 20px 16px;
+    border-bottom: 5px solid var(--border-color);
+    position: relative;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+}
+
+/* Botão de Tema */
+#toggle-theme {
+    background-color: var(--border-color);
+    color: #183C63;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+#toggle-theme:hover {
+    transform: scale(1.05);
+}
+
+/* --- CONTEÚDO PRINCIPAL (MAIN) --- */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px; /* Espaçamento lateral da página */
+}
+
+.main-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- DISPOSIÇÃO DAS POSTAGENS --- */
+.post {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.post img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Imagem redonda */
+    object-fit: cover;
+}
+
+.post-content h3 {
+    margin: 0 0 5px 0;
+}
+
+.author {
+    font-size: 0.85em;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+/* Cores do Tema Claro (Padrão) */
+:root {
+    --bg-color: #f4f4f9;
+    --card-bg: #ffffff;
+    --text-color: #183C63;
+    --header-bg: #183C63;
+    --header-text: #ffffff;
+    --border-color: #95ceed;
+}
+
+/* Cores do Tema Escuro */
+body.dark-mode {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --header-bg: #0b1d30;
+    --header-text: #95ceed;
+    --border-color: #183C63;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 20px 16px;
+    border-bottom: 5px solid var(--border-color);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+}
+
+#toggle-theme {
+    background-color: var(--border-color);
+    color: #183C63;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+#toggle-theme:hover {
+    transform: scale(1.05);
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.main-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.post {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.post img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-content h3 {
+    margin: 0 0 5px 0;
+}
+
+.author {
+    font-size: 0.85em;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
