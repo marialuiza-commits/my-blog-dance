@@ -1,80 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Dança - Hip Hop</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Dança - Hip Hop</title>
+
+  <!-- Estilos e Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>My Blog Dance</h1>
-        <button id="toggle-theme">Modo Escuro</button>
-    </header>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container header-container">
+      <h1 class="logo">My Blog Dance</h1>
+      <button id="toggle-theme" class="btn-theme" type="button" aria-label="Alternar tema">
+        <span>Modo Escuro</span>
+      </button>
+    </div>
+  </header>
 
-    <main>
-        <h2 class="main-title">Falando sobre o estilo de dança Hip Hop</h2>
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <section class="posts-section">
+      <h2 class="main-title">Falando sobre o estilo de dança Hip Hop</h2>
 
+      <div class="posts-grid">
+        <!-- Post 1 -->
         <article class="post">
-            <img src="Gemini_Generated_Image_hbd451hbd451hbd4.png" alt="Ilustração minimalista de uma dançarina de hip hop">
-            <div class="post-content">
-                <h3>Meu primeiro post</h3>
-                <p class="author">Por: Maria Luiza</p>
-                <p>Boas-vindas ao meu blog! Aqui vou compartilhar dicas sobre hip hop.</p>
-            </div>
+          <div class="post-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80" 
+              alt="Dançarino de Hip Hop em uma performance urbana"
+              class="post-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="post-content">
+            <h3 class="post-title">Meu primeiro post</h3>
+            <p class="post-author">Por <span>Maria Luiza</span></p>
+            <p class="post-text">Boas-vindas ao meu blog! Aqui vou compartilhar dicas sobre hip hop.</p>
+          </div>
         </article>
 
+        <!-- Post 2 -->
         <article class="post">
-            <img src="Gemini_Generated_Image_hbd451hbd451hbd4.png" alt="Dançarinos de Hip Hop">
-            <div class="post-content">
-                <h3>A História do Hip Hop nas Ruas</h3>
-                <p class="author">Por: Maria Luiza</p>
-                <p>O Hip Hop vai muito além da dança: é cultura, expressão e movimento urbano. Fique ligado para ver as próximas dicas de passos básicos!</p>
-            </div>
+          <div class="post-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=600&q=80" 
+              alt="Grupo de dançarinos performando hip hop na rua"
+              class="post-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="post-content">
+            <h3 class="post-title">A História do Hip Hop nas Ruas</h3>
+            <p class="post-author">Por <span>Maria Luiza</span></p>
+            <p class="post-text">O Hip Hop vai muito além da dança: é cultura, expressão e movimento urbano. Fique ligado para ver as próximas dicas de passos básicos!</p>
+          </div>
         </article>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
-</body>
-</html>
-<<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Dança - Hip Hop</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header>
-        <h1>My Blog Dance</h1>
-        <button id="toggle-theme">Modo Escuro</button>
-    </header>
-
-    <main>
-        <h2 class="main-title">Falando sobre o estilo de dança Hip Hop</h2>
-
-        <article class="post">
-            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=300&q=80" alt="Dançarino de Hip Hop">
-            <div class="post-content">
-                <h3>Meu primeiro post</h3>
-                <p class="author">Por: Maria Luiza</p>
-                <p>Boas-vindas ao meu blog! Aqui vou compartilhar dicas sobre hip hop.</p>
-            </div>
-        </article>
-
-        <article class="post">
-            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=300&q=80" alt="Dançarinos performando hip hop">
-            <div class="post-content">
-                <h3>A História do Hip Hop nas Ruas</h3>
-                <p class="author">Por: Maria Luiza</p>
-                <p>O Hip Hop vai muito além da dança: é cultura, expressão e movimento urbano. Fique ligado para ver as próximas dicas de passos básicos!</p>
-            </div>
-        </article>
-    </main>
-
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
