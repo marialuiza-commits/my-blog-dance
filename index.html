@@ -1,72 +1,369 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog de Dança - Hip Hop</title>
 
-  <!-- Estilos e Fontes -->
+  <meta
+    name="description"
+    content="Blog sobre Hip Hop, sua história, cultura e dança."
+  >
+
+  <title>My Blog Dance | Hip Hop</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Cabeçalho -->
+  <!-- CABEÇALHO -->
   <header class="header">
+
     <div class="container header-container">
-      <h1 class="logo">My Blog Dance</h1>
-      <button id="toggle-theme" class="btn-theme" type="button" aria-label="Alternar tema">
-        <span>Modo Escuro</span>
+
+      <a href="#inicio" class="logo">
+        My Blog <span>Dance</span>
+      </a>
+
+      <nav class="navigation" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#posts">Posts</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+
+      <button
+        id="toggle-theme"
+        class="btn-theme"
+        type="button"
+        aria-label="Alternar entre modo claro e escuro"
+        aria-pressed="false"
+      >
+        🌙 <span>Modo Escuro</span>
       </button>
+
     </div>
+
   </header>
 
-  <!-- Conteúdo Principal -->
-  <main class="container">
-    <section class="posts-section">
-      <h2 class="main-title">Falando sobre o estilo de dança Hip Hop</h2>
 
-      <div class="posts-grid">
-        <!-- Post 1 -->
-        <article class="post">
-          <div class="post-image-wrapper">
-            <img 
-              src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80" 
-              alt="Dançarino de Hip Hop em uma performance urbana"
-              class="post-image"
-              loading="lazy"
-            >
-          </div>
-          <div class="post-content">
-            <h3 class="post-title">Meu primeiro post</h3>
-            <p class="post-author">Por <span>Maria Luiza</span></p>
-            <p class="post-text">Boas-vindas ao meu blog! Aqui vou compartilhar dicas sobre hip hop.</p>
-          </div>
-        </article>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="inicio">
 
-        <!-- Post 2 -->
-        <article class="post">
-          <div class="post-image-wrapper">
-            <img 
-              src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=600&q=80" 
-              alt="Grupo de dançarinos performando hip hop na rua"
-              class="post-image"
-              loading="lazy"
-            >
-          </div>
-          <div class="post-content">
-            <h3 class="post-title">A História do Hip Hop nas Ruas</h3>
-            <p class="post-author">Por <span>Maria Luiza</span></p>
-            <p class="post-text">O Hip Hop vai muito além da dança: é cultura, expressão e movimento urbano. Fique ligado para ver as próximas dicas de passos básicos!</p>
-          </div>
-        </article>
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="container hero-content">
+
+        <div class="hero-text">
+
+          <span class="hero-tag">
+            🎵 CULTURA • DANÇA • EXPRESSÃO
+          </span>
+
+          <h1>
+            O ritmo das ruas,
+            <span>a energia do Hip Hop.</span>
+          </h1>
+
+          <p>
+            Um espaço para conhecer a história, a cultura e a força
+            do Hip Hop através da dança.
+          </p>
+
+          <a href="#posts" class="hero-button">
+            Explorar o blog →
+          </a>
+
+        </div>
+
       </div>
+
     </section>
+
+
+    <!-- POSTS -->
+    <section id="posts" class="posts-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-tag">
+            MEU BLOG
+          </span>
+
+          <h2>
+            Falando sobre o estilo de dança Hip Hop
+          </h2>
+
+          <p>
+            Descubra um pouco mais sobre esse movimento que transformou
+            a dança e a cultura urbana.
+          </p>
+
+        </div>
+
+
+        <div class="posts-grid">
+
+          <!-- POST 1 -->
+          <article class="post">
+
+            <div class="post-image-wrapper">
+
+              <img
+                src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=85"
+                alt="Dançarino realizando uma apresentação de Hip Hop"
+                class="post-image"
+                loading="lazy"
+              >
+
+              <span class="post-category">
+                HIP HOP
+              </span>
+
+            </div>
+
+            <div class="post-content">
+
+              <p class="post-date">
+                20 de agosto de 2026
+              </p>
+
+              <h3 class="post-title">
+                Meu primeiro post
+              </h3>
+
+              <p class="post-author">
+                Por <strong>Maria Luiza</strong>
+              </p>
+
+              <p class="post-text">
+                Boas-vindas ao meu blog! Aqui vou compartilhar
+                curiosidades, dicas e informações sobre o universo
+                do Hip Hop e da dança.
+              </p>
+
+              <a href="#sobre" class="read-more">
+                Ler mais →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- POST 2 -->
+          <article class="post">
+
+            <div class="post-image-wrapper">
+
+              <img
+                src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=800&q=85"
+                alt="Grupo de dançarinos apresentando uma coreografia urbana"
+                class="post-image"
+                loading="lazy"
+              >
+
+              <span class="post-category">
+                HISTÓRIA
+              </span>
+
+            </div>
+
+            <div class="post-content">
+
+              <p class="post-date">
+                20 de agosto de 2026
+              </p>
+
+              <h3 class="post-title">
+                A História do Hip Hop nas Ruas
+              </h3>
+
+              <p class="post-author">
+                Por <strong>Maria Luiza</strong>
+              </p>
+
+              <p class="post-text">
+                O Hip Hop vai muito além da dança: é cultura,
+                expressão, identidade e movimento urbano. Conheça
+                um pouco da história desse estilo e sua importância.
+              </p>
+
+              <a href="#sobre" class="read-more">
+                Ler mais →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- POST 3 -->
+          <article class="post">
+
+            <div class="post-image-wrapper">
+
+              <img
+                src="https://images.unsplash.com/photo-1524594154908-edd665bce6f3?auto=format&fit=crop&w=800&q=85"
+                alt="Dançarina realizando movimentos de dança urbana"
+                class="post-image"
+                loading="lazy"
+              >
+
+              <span class="post-category">
+                DANÇA
+              </span>
+
+            </div>
+
+            <div class="post-content">
+
+              <p class="post-date">
+                20 de agosto de 2026
+              </p>
+
+              <h3 class="post-title">
+                A dança como forma de expressão
+              </h3>
+
+              <p class="post-author">
+                Por <strong>Maria Luiza</strong>
+              </p>
+
+              <p class="post-text">
+                A dança permite transformar sentimentos, ideias e
+                experiências em movimento. No Hip Hop, cada passo
+                pode carregar personalidade e criatividade.
+              </p>
+
+              <a href="#sobre" class="read-more">
+                Ler mais →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- POST 4 -->
+          <article class="post">
+
+            <div class="post-image-wrapper">
+
+              <img
+                src="https://images.unsplash.com/photo-1535525153412-5a42439a210d?auto=format&fit=crop&w=800&q=85"
+                alt="Dançarino fazendo uma apresentação de street dance"
+                class="post-image"
+                loading="lazy"
+              >
+
+              <span class="post-category">
+                CULTURA
+              </span>
+
+            </div>
+
+            <div class="post-content">
+
+              <p class="post-date">
+                20 de agosto de 2026
+              </p>
+
+              <h3 class="post-title">
+                Elementos da cultura Hip Hop
+              </h3>
+
+              <p class="post-author">
+                Por <strong>Maria Luiza</strong>
+              </p>
+
+              <p class="post-text">
+                O Hip Hop reúne diferentes formas de arte e expressão,
+                como dança, música, arte visual e outras manifestações
+                que ajudam a contar histórias e representar comunidades.
+              </p>
+
+              <a href="#sobre" class="read-more">
+                Ler mais →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+    <section id="sobre" class="about-section">
+
+      <div class="container about-content">
+
+        <span class="section-tag">
+          SOBRE O BLOG
+        </span>
+
+        <h2>
+          Mais que uma dança. Uma forma de expressão.
+        </h2>
+
+        <p>
+          O Hip Hop surgiu como uma forma de expressão cultural e
+          ganhou o mundo através da música, da dança, da arte e
+          da criatividade. Neste blog, quero compartilhar um pouco
+          desse universo e mostrar como a dança pode contar histórias.
+        </p>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <!-- Scripts -->
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+      <div>
+
+        <h2>
+          My Blog Dance
+        </h2>
+
+        <p>
+          Cultura, ritmo e movimento.
+        </p>
+
+      </div>
+
+      <p class="copyright">
+        © 2026 Maria Luiza • Projeto de Computação
+      </p>
+
+    </div>
+
+  </footer>
+
+
   <script src="script.js"></script>
+
 </body>
+
 </html>

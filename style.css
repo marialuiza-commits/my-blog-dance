@@ -1,140 +1,762 @@
+/* =========================================================
+   MY BLOG DANCE — ESTILOS PRINCIPAIS
+   Tema: Hip Hop
+   ========================================================= */
 
-/* --- Variáveis Globais (Temas Claro/Escuro) --- */
+
+/* ==================== VARIÁVEIS ==================== */
+
 :root {
-  --bg-color: #f8f9fa;
+  --bg-color: #f5f5f7;
   --card-bg: #ffffff;
-  --text-color: #212529;
-  --text-muted: #6c757d;
+  --text-color: #171717;
+  --text-muted: #6b6b6b;
+
   --primary-color: #ff3366;
-  --border-color: #e9ecef;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --primary-dark: #d91f50;
+
+  --border-color: #e5e5e5;
+
+  --hero-bg: #111111;
+  --hero-text: #ffffff;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.15);
+
+  --radius: 18px;
 }
+
+
+/* ==================== TEMA ESCURO ==================== */
 
 [data-theme="dark"] {
-  --bg-color: #121212;
-  --card-bg: #1e1e1e;
-  --text-color: #f8f9fa;
-  --text-muted: #a0a0a0;
-  --border-color: #333333;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --bg-color: #0b0b0d;
+  --card-bg: #171719;
+  --text-color: #f5f5f5;
+  --text-muted: #aaaaaa;
+
+  --border-color: #292929;
+
+  --hero-bg: #050505;
+  --hero-text: #ffffff;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* --- Resets e Estilos Gerais --- */
+
+/* ==================== RESET ==================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+button {
+  font-family: inherit;
+}
+
+
+/* ==================== CONTAINER ==================== */
 
 .container {
-  max-width: 1100px;
+  width: min(1100px, 100%);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
-/* --- Header --- */
+
+/* ==================== HEADER ==================== */
+
 .header {
-  background-color: var(--card-bg);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--border-color);
-  padding: 1.5rem 0;
-  margin-bottom: 2rem;
+
+  backdrop-filter: blur(12px);
+
+  transition: background-color 0.3s ease;
 }
+
+
+[data-theme="dark"] .header {
+  background-color: rgba(11, 11, 13, 0.92);
+}
+
 
 .header-container {
+  min-height: 78px;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
 }
 
+
+/* ==================== LOGO ==================== */
+
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+
+  color: var(--text-color);
+
+  transition: transform 0.3s ease;
+}
+
+
+.logo span {
   color: var(--primary-color);
 }
 
-.btn-theme {
-  background: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--text-color);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+
+.logo:hover {
+  transform: translateY(-2px);
 }
+
+
+/* ==================== NAVEGAÇÃO ==================== */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+
+.navigation a {
+  position: relative;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  color: var(--text-color);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* Pequeno detalhe rosa ao passar o mouse */
+
+.navigation a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--primary-color);
+
+  transition: width 0.3s ease;
+}
+
+
+.navigation a:hover {
+  color: var(--primary-color);
+}
+
+
+.navigation a:hover::after {
+  width: 100%;
+}
+
+
+/* ==================== BOTÃO DE TEMA ==================== */
+
+.btn-theme {
+  border: 2px solid var(--primary-color);
+  background: transparent;
+
+  color: var(--text-color);
+
+  padding: 9px 15px;
+
+  border-radius: 30px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
 
 .btn-theme:hover {
   background-color: var(--primary-color);
   color: #ffffff;
+
+  transform: translateY(-2px);
 }
 
-/* --- Posts --- */
-.main-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+
+/* ==================== HERO ==================== */
+
+.hero {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.75) 45%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    url("https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1600&q=85")
+    center / cover no-repeat;
+
+  overflow: hidden;
+}
+
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -100px;
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  background: var(--primary-color);
+
+  opacity: 0.25;
+
+  filter: blur(60px);
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero-text {
+  max-width: 650px;
+
+  color: var(--hero-text);
+
+  animation: heroEntrance 0.8s ease both;
+}
+
+
+.hero-tag {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+  color: var(--primary-color);
+}
+
+
+.hero p {
+  max-width: 550px;
+
+  margin-bottom: 30px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 1.05rem;
+}
+
+
+/* ==================== BOTÃO EXPLORAR ==================== */
+
+.hero-button {
+  display: inline-block;
+
+  padding: 13px 24px;
+
+  border-radius: 30px;
+
+  background-color: var(--primary-color);
+  color: #ffffff;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+.hero-button:hover {
+  background-color: var(--primary-dark);
+
+  transform: translateY(-3px);
+}
+
+
+/* ==================== TÍTULOS DE SEÇÃO ==================== */
+
+.posts-section {
+  padding: 90px 0;
+}
+
+
+.section-heading {
+  max-width: 700px;
+
+  margin: 0 auto 50px;
+
   text-align: center;
 }
 
+
+.section-tag {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: var(--primary-color);
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.section-heading h2,
+.about-content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+
+  line-height: 1.2;
+
+  margin-bottom: 15px;
+
+  letter-spacing: -1px;
+}
+
+
+.section-heading p,
+.about-content p {
+  color: var(--text-muted);
+
+  font-size: 0.95rem;
+}
+
+
+/* ==================== POSTS ==================== */
+
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
 }
+
 
 .post {
   background-color: var(--card-bg);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
+
   border: 1px solid var(--border-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  border-radius: var(--radius);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
+
 
 .post:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+
+  box-shadow: var(--shadow-hover);
 }
 
+
+/* ==================== IMAGEM DOS POSTS ==================== */
+
 .post-image-wrapper {
-  width: 100%;
-  height: 220px;
+  position: relative;
+
+  height: 280px;
+
+  overflow: hidden;
 }
+
 
 .post-image {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
+  transition: transform 0.6s ease;
 }
+
+
+.post:hover .post-image {
+  transform: scale(1.06);
+}
+
+
+/* ==================== CATEGORIA ==================== */
+
+.post-category {
+  position: absolute;
+
+  left: 18px;
+  bottom: 18px;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background-color: var(--primary-color);
+  color: #ffffff;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* ==================== CONTEÚDO DO POST ==================== */
 
 .post-content {
-  padding: 1.5rem;
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
 }
 
-.post-title {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
 
-.post-author {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-}
+.post-date {
+  margin-bottom: 8px;
 
-.post-author span {
   color: var(--primary-color);
+
+  font-size: 0.75rem;
   font-weight: 600;
 }
 
+
+.post-title {
+  margin-bottom: 8px;
+
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+
+.post-author {
+  margin-bottom: 18px;
+
+  color: var(--text-muted);
+
+  font-size: 0.8rem;
+}
+
+
+.post-author strong {
+  color: var(--primary-color);
+}
+
+
 .post-text {
-  font-size: 0.95rem;
+  margin-bottom: 20px;
+
+  color: var(--text-muted);
+
+  font-size: 0.9rem;
+}
+
+
+/* ==================== LER MAIS ==================== */
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  color: var(--text-color);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.read-more:hover {
+  color: var(--primary-color);
+
+  transform: translateX(5px);
+}
+
+
+/* ==================== SOBRE ==================== */
+
+.about-section {
+  padding: 90px 0;
+
+  background-color: var(--card-bg);
+
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+.about-content {
+  max-width: 750px;
+
+  text-align: center;
+}
+
+
+.about-content h2 {
+  margin-bottom: 20px;
+}
+
+
+/* ==================== FOOTER ==================== */
+
+.footer {
+  padding: 45px 0;
+
+  background-color: #0b0b0d;
+
+  color: #ffffff;
+}
+
+
+.footer-content {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+.footer h2 {
+  margin-bottom: 5px;
+
+  font-size: 1.2rem;
+}
+
+
+.footer p {
+  color: #999999;
+
+  font-size: 0.8rem;
+}
+
+
+.copyright {
+  text-align: right;
+}
+
+
+/* ==================== ANIMAÇÕES ==================== */
+
+@keyframes heroEntrance {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* ==================== ACESSIBILIDADE ==================== */
+
+.navigation a:focus-visible,
+.hero-button:focus-visible,
+.read-more:focus-visible,
+.btn-theme:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 4px;
+}
+
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+@media (max-width: 850px) {
+
+  .navigation {
+    display: none;
+  }
+
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .hero {
+    min-height: 550px;
+  }
+
+
+  .footer-content {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .copyright {
+    text-align: left;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .container {
+    padding: 0 18px;
+  }
+
+
+  .header-container {
+    min-height: 70px;
+  }
+
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+
+  .btn-theme span {
+    display: none;
+  }
+
+
+  .btn-theme {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .hero {
+    min-height: 520px;
+  }
+
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+
+  .posts-section,
+  .about-section {
+    padding: 65px 0;
+  }
+
+
+  .post-image-wrapper {
+    height: 230px;
+  }
+
+
+  .post-content {
+    padding: 22px;
+  }
+
 }
